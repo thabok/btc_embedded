@@ -2,11 +2,11 @@ from distutils.core import setup
 
 setup(
     name='btc_embedded',
-    version='23.2.10',
+    version='23.1.0',
     packages=['btc_embedded'],
     include_package_data=True,
     license='MIT',
-    description='API wrapper for BTC EmbeddedPlatform 23.2p0 REST API',
+    description='API wrapper for BTC EmbeddedPlatform 23.1p0 REST API',
     author='Thabo Krick',
     author_email='thabo.krick@btc-embedded.com',
     url='https://github.com/btc-embedded/btc-embedded',
