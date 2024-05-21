@@ -222,7 +222,7 @@ class EPRestApi:
     # Checks if the REST Server is available
     def _is_rest_service_available(self):
         try:
-            response = requests.get(self._url('/test'))
+            response = requests.get(self._url('/test'), timeout=5)
         except requests.exceptions.ConnectionError:
             return False
         return response.ok
@@ -252,7 +252,9 @@ class EPRestApi:
         return response
 
     def _poll_long_running(self, jobID):
-        return self.get_req('/progress?progress-id=' + jobID)
+        # progress api was different in 22.2
+        # return self.get_req('/progress?progress-id=' + jobID)
+        return self.get_req('/progress/' + jobID)
 
 
     def _apply_preferences(self, config):

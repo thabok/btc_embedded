@@ -16,7 +16,7 @@
 
 # General settings - will be considered when creating the api object: ep = EPRestApi()
 installationRoot: C:/Program Files/BTC
-epVersion: 24.1p0
+epVersion: 22.2p0
 #licenseLocation: 27000@10.18.2.1
 
 # Preferences: key-value pairs according to
@@ -25,8 +25,8 @@ epVersion: 24.1p0
 #   indicated by the environment variable BTC_API_CONFIG_FILE
 # - the existance of the env var is mandatory for using relative path.
 preferences:
-  GENERAL_MATLAB_CUSTOM_VERSION: MATLAB R2023b (64-bit)
-  GENERAL_COMPILER_SETTING: (Internal) MinGW64 (64bit)
+  GENERAL_MATLAB_CUSTOM_VERSION: MATLAB R2021b (64-bit)
+  GENERAL_COMPILER_SETTING: MinGW64 (64bit)
   SIMULATION_MIL_NUMBER_OF_MATLAB_INSTANCES: 1
   REPORT_TEMPLATE_FOLDER: report-templates
   # vector generation settings
