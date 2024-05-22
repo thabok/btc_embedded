@@ -34,7 +34,7 @@ def install_btc_config():
         ep_version = None
         for subkey_name in _get_subkeys(key):
             if subkey_name.startswith("EmbeddedPlatform"):
-                ep_key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, rf"SOFTWARE\BTC\{subkey_name}")
+                ep_key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, rf"SOFTWARE\BTC\{subkey_name}", access=winreg.KEY_READ | winreg.KEY_WOW64_64KEY)
                 value_data, _ = winreg.QueryValueEx(ep_key, "EPACTIVE")
                 if value_data == '1':
                     # version
